@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Полезная лента</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+    }
+
+    .feed {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .post {
+      background: #fff;
+      margin-bottom: 12px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      font-weight: bold;
+    }
+
+    .image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .content {
+      padding: 12px;
+      line-height: 1.4;
+    }
+
+    .tag {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 6px;
+    }
+
+    .birthday {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    .birthday h2 {
+      margin: 0;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="feed">
+
+  <div class="post">
+    <div class="header">🍳 Быстрая готовка</div>
+    <img class="image" src="https://picsum.photos/500/300?food">
+    <div class="content">
+      <div class="tag">Совет</div>
+      Если нет времени — приготовь пасту с чесноком и маслом. Всего 10 минут, а вкус как в ресторане.
+    </div>
+  </div>
+
+  <div class="post">
+    <div class="header">🧠 Продуктивность</div>
+    <img class="image" src="https://picsum.photos/500/300?work">
+    <div class="content">
+      <div class="tag">Полезно</div>
+      Метод "2 минуты": если дело занимает меньше 2 минут — сделай сразу. Это сильно разгружает голову.
+    </div>
+  </div>
+
+  <div class="post">
+    <div class="header">💰 Финансы</div>
+    <img class="image" src="https://picsum.photos/500/300?money">
+    <div class="content">
+      <div class="tag">Совет</div>
+      Откладывай минимум 10% дохода. Даже маленькие суммы работают на дистанции.
+    </div>
+  </div>
+
+  <!-- Birthday Post -->
+  <div class="post">
+    <div class="birthday">
+      <h2>🎉 Сегодня День Рождения! 🎉</h2>
+      <p>Евгения Туркова празднует 🥳</p>
+	  <img class="image" src="https://avatars.mds.yandex.net/i?id=58beaa67e4a1dba2fc739bdf5e54a06d3f52c47f-4876504-images-thumbs&n=13">
+      <p>Напиши поздравление!</p>
+    </div>
+  </div>
+
+  <div class="post">
+    <div class="header">🥗 Питание</div>
+    <img class="image" src="https://picsum.photos/500/300?salad">
+    <div class="content">
+      <div class="tag">Здоровье</div>
+      Добавь больше овощей в рацион — это самый простой способ улучшить питание без диет.
+    </div>
+  </div>
+
+  <div class="post">
+    <div class="header">📚 Саморазвитие</div>
+    <img class="image" src="https://picsum.photos/500/300?books">
+    <div class="content">
+      <div class="tag">Идея</div>
+      Читай по 10 страниц в день — за год это десятки книг без напряга.
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
