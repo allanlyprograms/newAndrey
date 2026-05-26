@@ -1,126 +1,171 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Полезная лента</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Новости</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: Arial, sans-serif;
-      background: #f4f6f8;
     }
 
-    .feed {
-      max-width: 500px;
-      margin: 0 auto;
+    body {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      color: white;
     }
 
-    .post {
-      background: #fff;
-      margin-bottom: 12px;
-      border-radius: 12px;
+    .phone {
+      width: 390px;
+      background: #1a1a1a;
+      border-radius: 30px;
       overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border: 2px solid #333;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
     }
 
     .header {
-      display: flex;
-      align-items: center;
-      padding: 12px;
+      padding: 20px;
+      font-size: 34px;
       font-weight: bold;
+      background: #000;
+    }
+
+    .feed {
+      padding: 15px;
+    }
+
+    .card {
+      background: #222;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-bottom: 18px;
     }
 
     .image {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
+      height: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 70px;
     }
+
+    .img1 { background: linear-gradient(135deg,#4b79a1,#283e51); }
+    .img2 { background: linear-gradient(135deg,#232526,#414345); }
+    .img3 { background: linear-gradient(135deg,#654ea3,#eaafc8); }
+    .img4 { background: linear-gradient(135deg,#000428,#004e92); }
 
     .content {
-      padding: 12px;
-      line-height: 1.4;
+      padding: 16px;
     }
 
-    .tag {
-      font-size: 12px;
-      color: #888;
-      margin-bottom: 6px;
+    .title {
+      font-size: 22px;
+      line-height: 1.35;
+      margin-bottom: 16px;
     }
 
-    .birthday {
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      color: white;
+    .actions {
+      display: flex;
+      gap: 24px;
+      color: #bbb;
+      font-size: 18px;
+    }
+
+    .action {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-around;
+      padding: 16px;
+      background: #000;
+      color: #aaa;
+      font-size: 14px;
+    }
+	
+	.real-image {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+    .footer div {
       text-align: center;
-      padding: 30px 15px;
     }
-
-    .birthday h2 {
-      margin: 0;
-    }
-
   </style>
 </head>
 <body>
+  <div class="phone">
+    <div class="header">Новости</div>
 
-<div class="feed">
+    <div class="feed">
 
-  <div class="post">
-    <div class="header">🍳 Быстрая готовка</div>
-    <img class="image" src="https://picsum.photos/500/300?food">
-    <div class="content">
-      <div class="tag">Совет</div>
-      Если нет времени — приготовь пасту с чесноком и маслом. Всего 10 минут, а вкус как в ресторане.
+      <div class="card">
+        <div class="image img1">🏙️</div>
+        <div class="content">
+          <div class="title">В Москве стартовал международный форум технологий</div>
+          <div class="actions">
+            <div class="action">❤️ 241</div>
+            <div class="action">💬 38</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image img2">📱</div>
+        <div class="content">
+          <div class="title">Новая соцсеть набирает популярность среди молодежи</div>
+          <div class="actions">
+            <div class="action">❤️ 512</div>
+            <div class="action">💬 67</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image img3">🏆</div>
+        <div class="content">
+          <!--<div class="title">Магомед Муртазаалиев — победитель шоу «Выжить в Стамбуле» и собирается на выигрыш купить машину</div>-->
+		  <img 
+  src="https://uznayvse.ru/images/content/2026/1/19/magomed-murtazaaliev-takes-a-selfie-while-sitting-in-a-car_978.jpg"
+  alt="Магомед Муртазаалиев"
+  class="real-image"
+/>
+          <div class="actions">
+            <div class="action">❤️ 1257</div>
+            <div class="action">💬 87</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image img4">🚀</div>
+        <div class="content">
+          <div class="title">SpaceX успешно протестировала новый двигатель Starship</div>
+          <div class="actions">
+            <div class="action">❤️ 834</div>
+            <div class="action">💬 59</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div>🏠<br>Главная</div>
+      <div>📰<br>Новости</div>
+      <div>👤<br>Профиль</div>
     </div>
   </div>
-
-  <div class="post">
-    <div class="header">🧠 Продуктивность</div>
-    <img class="image" src="https://picsum.photos/500/300?work">
-    <div class="content">
-      <div class="tag">Полезно</div>
-      Метод "2 минуты": если дело занимает меньше 2 минут — сделай сразу. Это сильно разгружает голову.
-    </div>
-  </div>
-
-  <div class="post">
-    <div class="header">💰 Финансы</div>
-    <img class="image" src="https://picsum.photos/500/300?money">
-    <div class="content">
-      <div class="tag">Совет</div>
-      Откладывай минимум 10% дохода. Даже маленькие суммы работают на дистанции.
-    </div>
-  </div>
-
-  <!-- Birthday Post -->
-  <div class="post">
-    <div class="birthday">
-      <h2>🎉 Сегодня День Рождения! 🎉</h2>
-      <p>Евгения Туркова празднует 🥳</p>
-	  <img class="image" src="https://avatars.mds.yandex.net/i?id=58beaa67e4a1dba2fc739bdf5e54a06d3f52c47f-4876504-images-thumbs&n=13">
-      <p>Напиши поздравление!</p>
-    </div>
-  </div>
-
-  <div class="post">
-    <div class="header">🥗 Питание</div>
-    <img class="image" src="https://picsum.photos/500/300?salad">
-    <div class="content">
-      <div class="tag">Здоровье</div>
-      Добавь больше овощей в рацион — это самый простой способ улучшить питание без диет.
-    </div>
-  </div>
-
-  <div class="post">
-    <div class="header">📚 Саморазвитие</div>
-    <img class="image" src="https://picsum.photos/500/300?books">
-    <div class="content">
-      <div class="tag">Идея</div>
-      Читай по 10 страниц в день — за год это десятки книг без напряга.
-    </div>
-  </div>
-
-</div>
-
 </body>
 </html>
